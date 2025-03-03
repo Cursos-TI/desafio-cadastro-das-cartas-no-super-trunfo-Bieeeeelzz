@@ -1,22 +1,53 @@
 #include <stdio.h>
 
 int main(){
-   char estado[20] = "Distrito Federal";
-   char codigo_da_cidade[20] = "A01";
-   char nome_do_estado[20] = "Brasília";
-   int população = 2817000;
-   float área_em_km² = 5.802;
-   int PIB = 30;
-   int numeros_de_pontos_turisticos = 8;
-
-   printf("O estado de %s é ?\n", nome_do_estado);
-   scanf("%s", &estado);
-   printf("O estado de %s é o %s!\n", nome_do_estado, estado);
-
-   printf("Nosso código é esse aqui caso precise: %s.\n", codigo_da_cidade);
-   printf("Tem uma população de %d habitantes, e com uma área de %f km².\n", 2817000, 5.802);
-   printf("E contamos com %d pontos turisticos.\n", numeros_de_pontos_turisticos);
-   printf("Com uma renda bruta de aproximadamente %i milhões.\n", 30);
    
+
+   char Carta_1[20] = "Super Biel";
+   char Estado[20] = "Distrito Federal";
+   char Código[10] = "A01";
+   char Nome_da_Cidade[20] = "Brasília";
+   int População = 2817000;
+   float Área = 5.761 /*km²*/;
+   float PIB = 244.500 /*bilhões de reais*/;
+   int Número_de_Pontos_Turísticos = 8;
+   float Resultado;
+   float Resultado1;
+
+   //float Densidade_Populacional = hab/km²
+   //float PIB_per_Capita = reais
+   
+   printf("O Estado é: %s!\n", Estado);
+   printf("O estado do %s é %s!\n", Nome_da_Cidade, Estado);
+   printf("Nosso código é esse aqui caso precise: %s.\n", Código);
+   printf("Temos uma população de %d milhões de habitantes, e com uma área de %.3f km².\n", População, Área);
+   printf("E contamos com %d pontos turisticos.\n", Número_de_Pontos_Turísticos);
+   printf("Com uma renda bruta de aproximadamente R$%.2f bilhões.\n", PIB);
+
+   printf("Digite a População: \n");
+   scanf("%d", &População);
+
+   printf("Digite a Área da Cidade: \n");
+   scanf("%f", &Área);
+
+   Resultado = (2817000 / 5.761);
+
+   printf("A Densidade Populacional é: %.2f hab/km² \n", Resultado);
+
+   printf("PIB: \n");
+   scanf("%f", &PIB);
+
+   printf("Digite a População: \n");
+   scanf("%d", &População);
+
+   Resultado1 = (População / PIB);
+
+   printf("PIB per Capita: %.2f \n", Resultado1);
+
+
+   
+
+   return 0;
+
 
 }
